@@ -5,7 +5,7 @@ public class Plateau {
 public int nbLig;
 public int nbCol;
 public char [][] grille;
-
+// test
 //Constructeur
 public Plateau (int n, int p){
     nbLig = n;
