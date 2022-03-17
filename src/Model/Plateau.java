@@ -70,7 +70,7 @@ public void deplacerH(){
     for(int i = 0; i<nbLig; i++){
         for(int j=0; j<nbCol; j++){
             if (grille[i][j] == new Eceman().tochar() && continuer) //On cherche le joeur
-                if (i-1 >= 0 && grille [i-1][j] == 'o' || grille [i-1][j] == 'P') { // On teste la position
+                if (i-1 >= 0 && grille [i-1][j] == 'o' || grille [i-1][j] == 'P' || grille[i-1][j] == 'O') { // On teste la position
                     tmp = grille[i][j]; //On copie le perso
                     grille [i][j] = 'w'; // On vide la case
                     grille [i -1][j] = tmp; // On deplace le perso
@@ -89,13 +89,13 @@ public void deplacerB(){
     for(int i = 0; i<nbLig; i++){
         for(int j=0; j<nbCol; j++){
             if (grille[i][j] == new Eceman().tochar() && continuer) //On cherche le joeur
-                if (i-1 >= 0 && grille [i-1][j] == 'o' || grille [i-1][j] == 'P') { // On teste la position
+                if (i+1 >= 0 && grille [i+1][j] == 'o' || grille [i+1][j] == 'P' || grille[i+1][j] == 'O') { // On teste la position
                    // System.out.println(i + " "+ j);
                     tmp = grille[i][j]; //On copie le perso
                     grille [i][j] = 'w'; // On vide la case
                     grille [i +1][j] = tmp; // On deplace le perso
                     continuer = false;
-                    break; 
+        
                 }
         }
 
@@ -109,7 +109,7 @@ public void deplacerG(){
     for(int i = 0; i<nbLig; i++){
         for(int j=0; j<nbCol; j++){
             if (grille[i][j] == new Eceman().tochar() && continuer ) //On cherche le joeur
-                if (j-1 >= 0 && grille [i][j-1] == 'o' || grille [i][j-1] == 'P' ) { // On teste la position
+                if (j-1 >= 0 && grille [i][j-1] == 'o' || grille [i][j-1] == 'P' || grille[i][j-1] == 'O' ) { // On teste la position
                     tmp = grille[i][j]; //On copie le perso
                     grille [i][j] = 'w'; // On vide la case
                     grille [i][j-1] = tmp;
@@ -122,27 +122,25 @@ public void deplacerG(){
 
 }
 
-public boolean deplacerD(){
+public void deplacerD(){
     char tmp;
-    //boolean continuer = true;
+    boolean continuer = true;
     for(int i = 0; i<nbLig; i++){
         for(int j=0; j<nbCol; j++){
-            if (grille[i][j] == new Eceman().tochar()) //&& continuer) //On cherche le joeur
-                if (j+1 < nbCol && grille [i][j+1] == 'o' || grille [i][j+1] == 'P' ) { // On teste la position
+            if (grille[i][j] == new Eceman().tochar() && continuer) //&& continuer) //On cherche le joeur
+                if (j+1 < nbCol && grille [i][j+1] == 'o' || grille [i][j+1] == 'P' || grille[i][j+1] == 'O' ) { // On teste la position
                     tmp = grille[i][j]; //On copie le perso
                     grille [i][j] = 'w'; // On vide la case
                     grille [i][j+1] = tmp;
-                   // continuer = false; // On deplace le perso
-                    // Passage au niveeau suivant
+                   continuer = false; // On deplace le perso
                     
-                break; 
+                 
                           
                 }
                 
         }
 
     }
-return false;
  
 }
 

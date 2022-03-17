@@ -4,49 +4,64 @@ import java.util.*;
 
 public class Niveau2 {
 
-    public static void Niveau2() {
+    public static void Niveau2(Eceman E) {
 
 
-            //Eceman p1 = new Eceman();
-            //p1.toString();
-            
-            Plateau g1 = new Plateau(15, 19);
-            Eceman E = new Eceman();
-            
-            //On place le joueur
-            g1.placer(3,3, E.tochar());
-        
-            // On place la glace
-        
-            for(int i=4; i<10; i++){
-            g1.placer(3,i, 'o');
-              
+      Plateau g1 = new Plateau(15, 19);
+    
+      //On place le joueur
+      g1.placer(5,10, E.tochar());
+    
+      //On place la banquise dure
+    
+          for (int j =0; j<20;j++)
+        {
+            int c = 8 + (int)(Math.random() * 6);
+            int l = 4 + (int)(Math.random() * 10);
+            g1.placer(l,c, 'O');
+        }
+    
+    
+        // On place la glace
+        for (int j =0; j<6;j++)
+        {
+             for(int i=4; i<14; i++)
+             {
+                  g1.placer(i,8+j, 'o');
+                 }
+    
+        }
+    
+        //On place les murs
+    
+       int nombreAleatoire2 = 8 + (int)(Math.random() * 6);
+        for(int i=7; i<15; i++){
+              g1.placer(3,i, 'M');
               // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
               // System.out.println(randomNum);
-        
               }
-        
-      //On place la porte
-            g1.placer(3,10,'P');
-        
-        // On place les murs
-        
-        for(int i=2; i<12; i++){
-          g1.placer(2,i, 'M');
-          // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
-          // System.out.println(randomNum);
-          }
-        
-          for(int i=2; i<12; i++){
-            g1.placer(4,i, 'M');
+        for(int i=7; i<15; i++){
+            g1.placer(14,i, 'M');
             // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
             // System.out.println(randomNum);
             }
-        
-          g1.placer (3, 2, 'M');
-          g1.placer(3, 11, 'M');
-          
-          
+       
+    //On place la porte
+        g1.placer(8,14,'P');
+    
+    // On place les murs
+    
+    for(int i=4; i<14; i++){
+      g1.placer(i,7, 'M');
+      // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
+      // System.out.println(randomNum);
+      }
+    
+      for(int i=4; i<14; i++){
+        g1.placer(i,14, 'M');
+        // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
+        // System.out.println(randomNum);
+        }
             //Affichage
             g1.afficher();
             g1.deplacerH();
