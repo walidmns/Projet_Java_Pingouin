@@ -49,9 +49,7 @@ for(int i=2; i<12; i++){
     //Affichage
     g1.afficher();
 
-   
-
-    
+  
     boolean Niveau = true;
     while (Niveau){
     
