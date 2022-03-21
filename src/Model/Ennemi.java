@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Random;
+
 public class Ennemi {
   
     //Attribut
@@ -36,12 +38,14 @@ public class Ennemi {
   //Service
 
 public int attaquer() {
-    return 5;
+    Random rand = new Random();
+    int d = rand.nextInt(force)+1;
+    return d;
 }
 //Surcharge
 public char tochar(){
    // return "Vie du perso =" + vie + "\n Xp = " + xp;
-    return "E".charAt(0) ;
+    return "M".charAt(0) ;
   }
 
 }

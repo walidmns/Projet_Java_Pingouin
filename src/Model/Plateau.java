@@ -33,9 +33,8 @@ public Plateau (int n, int p){
             System.out.print(grille [i][j]);
 
             }        
-   System.out.println();
+   System.out.println("\n");
     }
-    System.out.println();
     }
 
 
@@ -158,8 +157,21 @@ public boolean passageNiv() {
 } 
 return fin;
 }
+public void afficher2(Brique brique){
+    System.out.println(); // Créer un retour à la ligne
+    grille [brique.getX()][brique.getY()] = brique.tochar();
+    for(int i=0; i<nbLig; i++){
+        for(int j=0; j<nbCol; j++){
+
+        System.out.print(grille [i][j]);
+
+        }        
+System.out.println("\n");
+}
 }
  
+}
+
 
 
 

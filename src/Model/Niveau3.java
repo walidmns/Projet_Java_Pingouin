@@ -11,10 +11,15 @@ public class Niveau3 {
             //p1.toString();
             
             Plateau g1 = new Plateau(15, 19);
-            Eceman E = new Eceman();
+            //Eceman E = new Eceman();
+            Brique B = new Brique(2, 2);
+            
+            g1.afficher2(B);
             
             //On place le joueur
-            g1.placer(3,3, E.tochar());
+            //g1.placer(3,3, E.tochar());
+
+
         
             // On place la glace
         
@@ -64,20 +69,21 @@ public class Niveau3 {
             int nb =sc1.nextInt();
             
             switch (nb) {
-              case 8: g1.deplacerH();
+              case 8: B.deplacerH();
               break;  
-              case 2 : g1.deplacerB();
+              case 2 : B.deplacerB();
               break;
-              case 4 : g1.deplacerG();
+              case 4 : B.deplacerG();
               break;
-              case 6 : g1.deplacerD();
+              case 6 : B.deplacerD();
               break;
               default: System.out.println ("Mauvais chiffre");  
             }
             for (int j=0; j<100; j++ ){
                System.out.println(); 
             }
-            g1.afficher();
+            g1.afficher2(B);
+
             
         
             }
