@@ -2,20 +2,31 @@ package Model;
 
 import java.util.*;
 
-public class Niveau3 {
+public class Niveau3 extends Position {
 
-    public static void Niveau3() {
+    public static void Niveau3() e {
 
 
           
             // On crée la grille
-            Plateau g1 = new Plateau(15, 19);
-            
+
+            private Plateau j;
+            private char [][] grille;
+
+            public Niveau3(int x, int y, Plateau j)  {
+              super(x, y);
+              this.grille = j.getGrille();
+            }
+        
+           // Plateau g1 = new Plateau(15, 19);
+             
             // On crée la brique et le joueur et on le place
             Brique B = new Brique(8, 12, g1);
             Eceman E = new Eceman(5, 10, g1);
             Tondeuse T = new Tondeuse(6, 11, g1);
             Potion P = new Potion(4,10, g1);
+            
+           
 
             // On place la glace
         for (int j =0; j<6;j++)
@@ -94,32 +105,30 @@ public class Niveau3 {
             g1.afficherPotion(P);
             }
             
-            // public void interaction(Tondeuse tondeuse){
-
-            //   if (this.grille[this.getX()][this.getY()-1] == tondeuse.tochar() || this.grille[this.getX()][this.getY()+1] == tondeuse.tochar() 
-            //   || this.grille[this.getX()+1][this.getY()] == tondeuse.tochar() || this.grille[this.getX()+1][this.getY()] == tondeuse.tochar()) {
+              if (this.grille[this.getX()][this.getY()-1] == T.tochar() || this.grille[this.getX()][this.getY()+1] == T.tochar() 
+              || this.grille[this.getX()+1][this.getY()] == T.tochar() || this.grille[this.getX()+1][this.getY()] == T.tochar()) {
                 
-            //     System.out.println("\n Vers ou vous voulez vous vous déplacer ?\n(8= haut, 2 = bas, 4 = gauche, 6= droite)");
-            //             Scanner sc1 = new Scanner (System.in);
-            //             int nb =sc1.nextInt();
+                System.out.println("\n Vers ou vous voulez vous vous déplacer ?\n(8= haut, 2 = bas, 4 = gauche, 6= droite)");
+                        Scanner sc1 = new Scanner (System.in);
+                        int nb =sc1.nextInt();
                         
-            //             switch (nb) {
-            //               case 8: T.deplacerH();
-            //               break;  
-            //               case 2 : T.deplacerB();
-            //               break;
-            //               case 4 : B.deplacerG();
-            //               break;
-            //               case 6 : B.deplacerD();
-            //               break;
-            //               default: System.out.println ("Mauvais chiffre");  
-            //             }
+                        switch (nb) {
+                          case 8: T.deplacerH();
+                          break;  
+                          case 2 : T.deplacerB();
+                          break;
+                          case 4 : B.deplacerG();
+                          break;
+                          case 6 : B.deplacerD();
+                          break;
+                          default: System.out.println ("Mauvais chiffre");  
+                        }
             
-            //   }
-            // }
+              }
+            
         
           
-            }     
+                 
 
 
     }

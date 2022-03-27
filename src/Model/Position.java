@@ -18,6 +18,7 @@ private char yNouvellePosition;
 private char xN;
 private char yN;
 
+// Plateau g1 = new Plateau(15, 19);
 
 // char [][] grille = j.getGrille();
 

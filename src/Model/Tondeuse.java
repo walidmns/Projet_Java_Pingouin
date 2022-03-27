@@ -53,7 +53,7 @@ public class Tondeuse extends Position {
   
   public void deplacerH() {
   
-    while (this.getxNouvellePosition()-1 != 'M'){
+    while (this.grille[this.getX()-1][this.getY()] != 'M'){
 
         this.setXAncienPosition(this.getX());
         this.setYAncienPosition(this.getY()); 
