@@ -15,6 +15,9 @@ private int yAncienPosition;
 private char xNouvellePosition;
 private char yNouvellePosition;
 
+private char xN;
+private char yN;
+
 
 // char [][] grille = j.getGrille();
 
@@ -27,7 +30,9 @@ this.xNouvellePosition = 0;
 this.yNouvellePosition = 0;
 }
 
-  public char getxNouvellePosition(){
+
+
+public char getxNouvellePosition(){
     return this.xNouvellePosition;
 
   }

@@ -10,10 +10,28 @@ public class Tondeuse extends Position {
     private Plateau j;
     private char [][] grille;
     private char mur = 'M';
+    private char xN;
+    private char yN;
 
     public Tondeuse(int x, int y, Plateau j) {
         super(x,y);
         this.grille = j.getGrille();
+      
+      }
+
+      public char getXn(){
+        return this.xN;
+      }
+      public char getYn(){
+        return this.xN;
+      }
+      public void setXn(char o){
+      
+        this.xN = o;
+      }
+      public void setYn(char o){
+      
+        this.yN = o;
       }
 
     public char tochar (){
@@ -23,12 +41,13 @@ public class Tondeuse extends Position {
 
  public void deplacerB() {
         
-    for (int i=0; i != mur; i++){
+  while (this.grille[this.getX()+1][this.getY()] != 'M'){
+    
+    this.setXAncienPosition(this.getX());
+    this.setYAncienPosition(this.getY()); 
+    this.setX(this.getX()+1);
 
-        this.setXAncienPosition(this.getX());
-        this.setYAncienPosition(this.getY()); 
-        this.setX(this.getX()+ i);
-    }
+  }
     
   }
   

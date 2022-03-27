@@ -93,9 +93,33 @@ public class Niveau3 {
             g1.afficherTondeuse(T);
             g1.afficherPotion(P);
             }
+            
+            // public void interaction(Tondeuse tondeuse){
+
+            //   if (this.grille[this.getX()][this.getY()-1] == tondeuse.tochar() || this.grille[this.getX()][this.getY()+1] == tondeuse.tochar() 
+            //   || this.grille[this.getX()+1][this.getY()] == tondeuse.tochar() || this.grille[this.getX()+1][this.getY()] == tondeuse.tochar()) {
+                
+            //     System.out.println("\n Vers ou vous voulez vous vous déplacer ?\n(8= haut, 2 = bas, 4 = gauche, 6= droite)");
+            //             Scanner sc1 = new Scanner (System.in);
+            //             int nb =sc1.nextInt();
+                        
+            //             switch (nb) {
+            //               case 8: T.deplacerH();
+            //               break;  
+            //               case 2 : T.deplacerB();
+            //               break;
+            //               case 4 : B.deplacerG();
+            //               break;
+            //               case 6 : B.deplacerD();
+            //               break;
+            //               default: System.out.println ("Mauvais chiffre");  
+            //             }
+            
+            //   }
+            // }
         
           
-            }   
+            }     
 
 
     }

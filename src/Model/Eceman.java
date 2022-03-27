@@ -1,4 +1,5 @@
 package Model;
+import java.util.*;
 
 public class Eceman extends Position  {
   
@@ -13,7 +14,7 @@ public class Eceman extends Position  {
   //Constructeurs
 
   //Définition de la position de Eceman
-  public Eceman(int x, int y, Plateau j) {
+  public Eceman(int x, int y, Plateau j)  {
     super(x, y);
     this.grille = j.getGrille();
   }
@@ -85,6 +86,9 @@ public void deplacerG() {
   this.setY(this.getY()-1);
 }
 }
+
+
+
 
   // Accesseurs
   public int getVie(){ //Renvoie la vie
