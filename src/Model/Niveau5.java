@@ -11,7 +11,7 @@ public class Niveau5 {
             //p1.toString();
             
             Plateau g1 = new Plateau(15, 19);
-            Eceman E = new Eceman();
+            Eceman E = new Eceman(3,3,g1);
             
             //On place le joueur
             g1.placer(3,3, E.tochar());
@@ -48,9 +48,9 @@ public class Niveau5 {
           
           
             //Affichage
-            g1.afficher();
-            g1.deplacerH();
-            g1.afficher();
+            g1.afficherEceman(E);
+           
+            // g1.afficher();
         
             // boolean Niveau = true;
             // while (Niveau){
@@ -64,20 +64,20 @@ public class Niveau5 {
             int nb =sc1.nextInt();
             
             switch (nb) {
-              case 8: g1.deplacerH();
+              case 8: E.deplacerH();
               break;  
-              case 2 : g1.deplacerB();
+              case 2 : E.deplacerB();
               break;
-              case 4 : g1.deplacerG();
+              case 4 : E.deplacerG();
               break;
-              case 6 : g1.deplacerD();
+              case 6 : E.deplacerD();
               break;
               default: System.out.println ("Mauvais chiffre");  
             }
             for (int j=0; j<100; j++ ){
                System.out.println(); 
             }
-            g1.afficher();
+            g1.afficherEceman(E);
             
         
             }

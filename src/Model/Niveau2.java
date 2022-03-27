@@ -4,23 +4,24 @@ import java.util.*;
 
 public class Niveau2 {
 
-    public static void Niveau2(Eceman E) {
+    public static void Niveau2() {
 
-
+      // On crée la grille et on place
       Plateau g1 = new Plateau(15, 19);
-    
-      //On place le joueur
-      g1.placer(5,10, E.tochar());
+      Eceman E = new Eceman(5,10, g1);
+      Banquisedure O = new Banquisedure(11, 11, g1);
+            
     
       //On place la banquise dure
     
-          for (int j =0; j<20;j++)
-        {
-            int c = 8 + (int)(Math.random() * 6);
-            int l = 4 + (int)(Math.random() * 10);
-            g1.placer(l,c, 'O');
-        }
-    
+        //   for (int j =0; j<20;j++)
+        // {
+        //     int c = 8 + (int)(Math.random() * 6);
+        //     int l = 4 + (int)(Math.random() * 10);
+            // g1.placer(l,c, 'O');
+            
+        // }
+        
     
         // On place la glace
         for (int j =0; j<6;j++)
@@ -62,11 +63,11 @@ public class Niveau2 {
         // int randomNum = ThreadLocalRandom.current().nextInt(0, 19 + 1);
         // System.out.println(randomNum);
         }
-            //Affichage
-            g1.afficher();
-            g1.deplacerH();
-            g1.afficher();
-        
+            //Affichage de Eceman
+            
+            g1.afficherEceman(E);
+            g1.afficherBanquisedure(O);
+
             boolean Niveau = true;
             while (Niveau){
                 if(g1.passageNiv()){
@@ -79,21 +80,21 @@ public class Niveau2 {
             int nb =sc1.nextInt();
             
             switch (nb) {
-              case 8: g1.deplacerH();
+              case 8: E.deplacerH();
               break;  
-              case 2 : g1.deplacerB();
+              case 2 : E.deplacerB();
               break;
-              case 4 : g1.deplacerG();
+              case 4 : E.deplacerG();
               break;
-              case 6 : g1.deplacerD();
+              case 6 : E.deplacerD();
               break;
               default: System.out.println ("Mauvais chiffre");  
             }
             for (int j=0; j<100; j++ ){
                System.out.println(); 
             }
-            g1.afficher();
-            
+            g1.afficherEceman(E);
+            g1.afficherBanquisedure(O);
         
             }
         

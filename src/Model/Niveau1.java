@@ -8,12 +8,16 @@ import javax.swing.text.AbstractDocument.BranchElement;
 
 public class Niveau1 {
 
-    public static void Niveau1(Eceman E) {
+    public static void Niveau1() {
 
       Plateau g1 = new Plateau(15, 19);
+      Eceman E = new Eceman(3,3, g1);
+
+    g1.afficherEceman(E);
     
+
   //On place le joueur
-  g1.placer(3,3, E.tochar());
+  //g1.placer(3,3, E.tochar());
 
     
 // On place la glace
@@ -47,7 +51,7 @@ for(int i=2; i<12; i++){
   
  
     //Affichage
-    g1.afficher();
+    g1.afficherEceman(E);
 
   
     boolean Niveau = true;
@@ -55,28 +59,27 @@ for(int i=2; i<12; i++){
     
     if (g1.passageNiv()) {
       Niveau=false;
-      Niveau2.Niveau2(E);
+      Niveau2.Niveau2();
     }    
     System.out.println("\n Vers ou vous voulez vous vous déplacer ?\n(8= haut, 2 = bas, 4 = gauche, 6= droite)");
     Scanner sc1 = new Scanner (System.in);
     int nb =sc1.nextInt();
     
     switch (nb) {
-      case 8: g1.deplacerH();
+      case 8: E.deplacerH();
       break;  
-      case 2 : g1.deplacerB();
+      case 2 : E.deplacerB();
       break;
-      case 4 : g1.deplacerG();
+      case 4 : E.deplacerG();
       break;
-      case 6 : g1.deplacerD();
+      case 6 : E.deplacerD();
       default: System.out.println ("Mauvais chiffre");  
     }
     for (int j=0; j<100; j++ ){
        System.out.println(); 
     }
     
-
-    g1.afficher();
+    g1.afficherEceman(E);
 
     }
 
