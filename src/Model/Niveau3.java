@@ -7,15 +7,15 @@ public class Niveau3 extends Niveau
 public Niveau3() throws InvalidAttributeValueException {
 	super(carte);
 	this.objets = new Objet[] {
-	new Eceman(5, 3)	
-	};
-    this.objets = new Objet[]{
-    new Tondeuse(10, 14)    
-    };
-
+		new Eceman(5, 3)	
+		};
+		this.objets = new Objet[]{
+			new Tondeuse(10, 14) 
 	
 		//TODO Auto-generated constructor stub
-	}
+	};
+      
+		}
 	public static String  carte =  
 
 			"###################"+

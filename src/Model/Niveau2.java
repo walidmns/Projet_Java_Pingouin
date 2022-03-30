@@ -7,7 +7,7 @@ public class Niveau2 extends Niveau
 public Niveau2() throws InvalidAttributeValueException {
 	super(carte);
 	this.objets = new Objet[] {
-	new Eceman(6, 3)	
+	new Eceman(5, 3)	
 
 	};
 
@@ -20,11 +20,11 @@ public Niveau2() throws InvalidAttributeValueException {
 			"###################"+
 			"###################"+
 			"####MMMMMMMMMM#####"+
-			"####MooooooOOM#####"+
-			"####MoooOooOoMMM###"+
-			"####MoooOOoOOoOM###"+
-			"####M##ooOooOooM###"+
-			"####MOOooOOoooPM###"+
+			"####MoooooP##M#####"+
+			"####M########MMM###"+
+			"####M##########M###"+
+			"####M##########M###"+
+			"####M##############"+
 			"####MMMMMMMMMMMM###"+
 			"###################"+
 			"###################"+

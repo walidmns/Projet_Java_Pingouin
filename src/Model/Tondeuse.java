@@ -7,4 +7,5 @@ public class Tondeuse extends Objet{
 		this.representation = 'T';
 		this.lourd = true;
 	}
+	
 }
