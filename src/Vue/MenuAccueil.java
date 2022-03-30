@@ -1,4 +1,4 @@
-package View;
+package Vue;
 import java.util.*;
 
 public class MenuAccueil {
@@ -47,73 +47,3 @@ public class MenuAccueil {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*public class MenuAccueil {
-
-    public static void main (String[] args) {
-        fonction1();
-    }
-
-public static void fonction1() {
-
-    System.out.println("Bienvenue sur le jeu Club Penguin thin Ice Complete walktrough");
-        
-    System.out.println("1 - Règles du jeu");
-
-    System.out.println("2 - Nouvelle partie");
-    
-    System.out.println("3 - Continuer sa partie");
-
-    System.out.println("4 - Voir les scores");
-
-}
-    
-
-}
-
-/*        
-    public MenuAccueil() throws Exception {
-        
-        private int res;
-        private Scanner scan;
-  
-        scan = new Scanner (System.in);
-
-        int choix;
-        System.out.println("Bienvenue sur le jeu Club Penguin thin Ice Complete walktrough");
-        choix=scan.nextInt();
-        switch (choix) {
-            case 1:
-                res(1);
-                break;
-            case 2:
-                res(2);
-                break;
-            case 3:
-                System.out.println("\n Bonne journée\n");
-                res(3);
-                break;
-
-
-            }
-
-
-        }
-
-    }
-
-}
-*/
