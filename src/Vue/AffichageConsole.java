@@ -10,6 +10,7 @@ public class AffichageConsole
 	public static void Afficher(Niveau niveau)
 	{
 		String output = "";
+	
 		// On écrit ligne par ligne
 		for (int y = 0; y < Niveau.tailleY; y++) {
 			// On écrit chaque colonne avant de passer à la ligne suivante
@@ -20,6 +21,7 @@ public class AffichageConsole
 					if (o.x == x && o.y == y) {
 						// Il y a un objet, on écrit sa représentation
 						output += o.representation;
+						
 						objetIci = true;
 						break;
 					}
@@ -29,6 +31,7 @@ public class AffichageConsole
 					continue;
 				}
 				output += niveau.terrain[y][x].representation;
+				
 			}
 			// Toute les colonnes sont écrites, on passe à la ligne suivante
 			output += "\n";

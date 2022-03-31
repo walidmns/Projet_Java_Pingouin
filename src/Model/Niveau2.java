@@ -20,9 +20,9 @@ public Niveau2() throws InvalidAttributeValueException {
 			"###################"+
 			"###################"+
 			"####MMMMMMMMMM#####"+
-			"####MoooooP##M#####"+
-			"####M########MMM###"+
-			"####M##########M###"+
+			"####MoooooooPM#####"+
+			"####MooooooooMMM###"+
+			"####Moooooooo#M####"+
 			"####M##########M###"+
 			"####M##############"+
 			"####MMMMMMMMMMMM###"+

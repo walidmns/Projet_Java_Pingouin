@@ -14,7 +14,7 @@ import Vue.MenuAccueil;
 public class Main
 {
 	public static  Niveau niveau = null;
-	public static  Niveau niveau2 = null;
+	
 	
 	public static void LancerNiveau(Niveau niveau) throws Exception{
 		AffichageConsole.Afficher(niveau);
@@ -67,9 +67,7 @@ public class Main
 			// Init (chargement des modèle)
 			 niveau = new Niveau1();
 			//  System.out.println("coucou");
-			
-
-			LancerNiveau(niveau);
+			 LancerNiveau(niveau);
 
 			 niveau = new Niveau2();
 			 LancerNiveau(niveau);

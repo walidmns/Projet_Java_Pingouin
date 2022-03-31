@@ -12,4 +12,8 @@ public class Tuile
 		return false;
 
 	} 
+
+	public boolean Deplacable(){
+		return false;
+	}
 }
