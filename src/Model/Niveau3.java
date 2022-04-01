@@ -7,7 +7,7 @@ public class Niveau3 extends Niveau
 public Niveau3() throws InvalidAttributeValueException  {
 	super(carte);
 	this.objets = new Objet[] {
-		new Eceman(5, 3) , new Tondeuse(8, 3), new Brique(6, 5), new Potion(8, 4)};	
+		new Eceman(5, 3) , new Tondeuse(8, 3), new Brique(8, 4), new Potion(6, 5)};	
 		//TODO Auto-generated constructor stub
 	
 		}
@@ -16,8 +16,8 @@ public Niveau3() throws InvalidAttributeValueException  {
 			"###################"+
 			"###################"+
 			"####MMMMMMMMM######"+
-			"####MoooooooM######"+
-			"####MoooooooM######"+
+			"####MooOoooooM#####"+
+			"####MooooooMM######"+
 			"####MooooooPM######"+
 			"####MMMMMMMMM######"+
 			"###################"+

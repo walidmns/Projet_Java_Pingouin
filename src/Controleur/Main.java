@@ -27,6 +27,7 @@ public class Main
 
 			}
 			AffichageConsole.Afficher(niveau);
+			
 			if(niveau.fini()){
 				System.out.println("Le jeu est terminé");
 				break;

@@ -19,7 +19,7 @@ public class Eceman extends Objet
 
 	public void Deplacement() throws Exception
 	{
-		if (Clavier.Touche == Clavier.Direction.Haut && (this.y == 0 || !Main.niveau.terrain[this.y-1][this.x].Traversable(this))) {
+		if (Clavier.Touche == Clavier.Direction.Haut && (this.y == 0|| !Main.niveau.terrain[this.y-1][this.x].Traversable(this))) {
 				throw new GameUpdateException("Deplacement invalide");
 			}
 		
@@ -27,19 +27,21 @@ public class Eceman extends Objet
 				throw new GameUpdateException("Deplacement invalide");
 			}
 		
-		if (Clavier.Touche == Clavier.Direction.Gauche && (this.y == 0 || !Main.niveau.terrain[this.y][this.x-1].Traversable(this))) {
+		if (Clavier.Touche == Clavier.Direction.Gauche && (this.x == 0 || !Main.niveau.terrain[this.y][this.x-1].Traversable(this))) {
 			throw new GameUpdateException("Deplacement invalide");
 			}
-		
-		// if (Clavier.Touche == Clavier.Direction.Droite && (this.y == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this))) {
-		// 	throw new GameUpdateException("Deplacement invalide");
-		// 	}
+	
+
+		if (Clavier.Touche == Clavier.Direction.Droite && (this.x == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this))) {
 			
-		if (Clavier.Touche == Clavier.Direction.Droite && (this.y == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this)) ) {
-				// Main.niveau.objets[2].Deplacement(Direction.Droite);
-				throw new GameUpdateException("Deplacement invalide");
-					
+			throw new GameUpdateException("Deplacement invalide");
 			}
+			
+		// if (Clavier.Touche == Clavier.Direction.Droite && (this.y == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this)) ) {
+		// 		Main.niveau.objets[2].Deplacement(Direction.Droite);
+		// 		throw new GameUpdateException("Deplacement invalide");
+					
+		// 	}
 				
 		// if (Main.niveau.objets.length > 1 && Clavier.Touche == Clavier.Direction.Droite && Main.niveau.objets[1].getX() == this.x +1 && Main.niveau.objets[1].getY() == this.y && Main.niveau.objets[1].Deplacable()) {
 		// 		Main.niveau.objets[2].Deplacement(Clavier.Touche.Droite);
@@ -55,7 +57,25 @@ switch(Clavier.Touche){
 	break;
 	case Bas : this.y ++;
 	break;
-	case Droite : this.x ++;
+	case Droite : 
+	if(Main.niveau.objets.length > 2){
+		if(Main.niveau.objets[0].x == Main.niveau.objets[3].x && Main.niveau.objets[0].y == Main.niveau.objets[3].y ){
+			System.out.println("knsfoc");
+			this.lourd = false;
+			this.x++;
+		}
+		   else{
+			this.x ++;
+		   
+		   }
+		   
+
+	}
+	else{
+		this.x ++;
+	   
+	   }
+	
 	break;
 	case Gauche : this.x --;
 	break;

@@ -36,13 +36,36 @@ Main.niveau.terrain[this.y][this.x].Marche(this);
 
 switch(Clavier.Touche){
 
-	case Haut : this.y -- ;
+	case Haut : if(Main.niveau.objets[0].x == Main.niveau.objets[1].x && Main.niveau.objets[0].y-1 == Main.niveau.objets[1].y ){
+	while (Main.niveau.terrain[this.y][this.x+1].Traversable(this)) {
+		this.y --;
+		Main.niveau.terrain[this.y][this.x].Marche(this);	
+	}  
+}
 	break;
-	case Bas : this.y ++;
+	case Bas : if(Main.niveau.objets[0].x == Main.niveau.objets[1].x && Main.niveau.objets[0].y+1 == Main.niveau.objets[1].y ){
+		while (Main.niveau.terrain[this.y][this.x+1].Traversable(this)) {
+			this.y ++;
+			Main.niveau.terrain[this.y][this.x].Marche(this);	
+		}  
+	}
 	break;
-	case Droite : this.x ++;
+	case Droite : 
+	if(Main.niveau.objets[0].x == Main.niveau.objets[1].x-1 && Main.niveau.objets[0].y == Main.niveau.objets[1].y ){
+	while (Main.niveau.terrain[this.y][this.x+1].Traversable(this)) {
+		this.x ++;
+		Main.niveau.terrain[this.y][this.x].Marche(this);	
+	}  
+}
+	
+	
 	break;
-	case Gauche : this.x --;
+	case Gauche : if(Main.niveau.objets[0].x == Main.niveau.objets[1].x+1 && Main.niveau.objets[0].y == Main.niveau.objets[1].y ){
+		while (Main.niveau.terrain[this.y][this.x+1].Traversable(this)) {
+			this.x --;
+			Main.niveau.terrain[this.y][this.x].Marche(this);	
+		}  
+	}
 	break;
 }
 	}

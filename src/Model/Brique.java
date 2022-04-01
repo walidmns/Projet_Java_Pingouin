@@ -1,4 +1,6 @@
 package Model;
+import java.time.chrono.MinguoChronology;
+
 import Controleur.*;
 public class Brique extends Objet {
     public Brique(int x, int y) {
@@ -20,23 +22,31 @@ public class Brique extends Objet {
 			throw new GameUpdateException("Deplacement invalide");
 		}
 	
-	if (Clavier.Touche == Clavier.Direction.Gauche && (this.y == 0 || !Main.niveau.terrain[this.y][this.x-1].Traversable(this))) {
+	if (Clavier.Touche == Clavier.Direction.Gauche && (this.x == 0 || !Main.niveau.terrain[this.y][this.x-1].Traversable(this))) {
 		throw new GameUpdateException("Deplacement invalide");
 		}
 	
-	if (Clavier.Touche == Clavier.Direction.Droite && (this.y == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this))) {
+	if (Clavier.Touche == Clavier.Direction.Droite && (this.x == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this)) && Main.niveau.terrain[this.y][this.x-1].representation == 'E' ) {
+		
 		throw new GameUpdateException("Deplacement invalide");
 		}
 
 switch(Clavier.Touche){
 
-	case Haut : this.y --;
+	 case Haut : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+		this.y --;}
 	break;
-	case Bas : this.y ++;
+	case Bas : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+		this.y ++;}
 	break;
-	case Droite : this.x ++;
+	
+	case Droite :
+	if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+		this.x ++;}
+		// System.out.println(Main.niveau.terrain[this.y][this.x-1].representation); 
 	break;
-	case Gauche : this.x --;
+	case Gauche : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+		this.x --;}
 	break;
 }
 	}
