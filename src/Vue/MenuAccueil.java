@@ -1,5 +1,8 @@
 package Vue;
+import java.io.FileNotFoundException;
 import java.util.*;
+
+import Model.Niveau1;
 
 public class MenuAccueil {
     private int res;
@@ -28,7 +31,12 @@ public class MenuAccueil {
                     break;
                 case 3:
                 res = 3;
-                    // do what you want
+             Niveau1 test;
+                try{
+                    test = Niveau1.deserialiserPortefeuille();
+                } catch(FileNotFoundException f){
+                    test = new Niveau1();
+                }   // do what you want
                 System.out.println("On continue la partie super");
                     break;
                 case 4:

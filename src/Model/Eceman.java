@@ -23,7 +23,7 @@ public class Eceman extends Objet
 				throw new GameUpdateException("Deplacement invalide");
 			}
 		
-		if (Clavier.Touche == Clavier.Direction.Bas && (this.y == 0 || !Main.niveau.terrain[this.y+1][this.x].Traversable(this))) {
+		if (Clavier.Touche == Clavier.Direction.Bas && (this.y == 15 || !Main.niveau.terrain[this.y+1][this.x].Traversable(this))) {
 				throw new GameUpdateException("Deplacement invalide");
 			}
 		
@@ -32,7 +32,7 @@ public class Eceman extends Objet
 			}
 	
 
-		if (Clavier.Touche == Clavier.Direction.Droite && (this.x == 0 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this))) {
+		if (Clavier.Touche == Clavier.Direction.Droite && (this.x == 19 || !Main.niveau.terrain[this.y][this.x+1].Traversable(this))) {
 			
 			throw new GameUpdateException("Deplacement invalide");
 			}
@@ -53,12 +53,47 @@ Main.niveau.terrain[this.y][this.x].Marche(this);
 
 switch(Clavier.Touche){
 
-	case Haut : this.y --;
+	case Haut :
+	if(Main.niveau.objets.length > 1){
+		if(Main.niveau.objets[0].x == Main.niveau.objets[3].x && Main.niveau.objets[0].y == Main.niveau.objets[3].y ){
+			System.out.println("knsfoc");
+			this.lourd = false;
+			this.y --;
+		}
+		   else{
+			this.y --;
+		   
+		   }
+		   
+
+	}
+	else{
+		this.y --;
+	   
+	   }
 	break;
-	case Bas : this.y ++;
+	case Bas :
+	if(Main.niveau.objets.length > 1){
+		if(Main.niveau.objets[0].x == Main.niveau.objets[3].x && Main.niveau.objets[0].y == Main.niveau.objets[3].y ){
+			System.out.println("knsfoc");
+			this.lourd = false;
+			this.y++;
+		}
+		   else{
+			this.y ++;
+		   
+		   }
+		   
+
+	}
+	else{
+		this.y ++;
+	   
+	   }
 	break;
+
 	case Droite : 
-	if(Main.niveau.objets.length > 2){
+	if(Main.niveau.objets.length > 1){
 		if(Main.niveau.objets[0].x == Main.niveau.objets[3].x && Main.niveau.objets[0].y == Main.niveau.objets[3].y ){
 			System.out.println("knsfoc");
 			this.lourd = false;
@@ -75,12 +110,32 @@ switch(Clavier.Touche){
 		this.x ++;
 	   
 	   }
-	
 	break;
-	case Gauche : this.x --;
-	break;
-}
+
+	case Gauche :
+	if(Main.niveau.objets.length > 1){
+		if(Main.niveau.objets[0].x == Main.niveau.objets[3].x && Main.niveau.objets[0].y == Main.niveau.objets[3].y ){
+			System.out.println("knsfoc");
+			this.lourd = false;
+			this.x--;
+		}
+		   else{
+			this.x --;
+		   
+		   }
+		   
+
 	}
+	else{
+		this.x --;
+	   
+	   }
+	break;
 
+	default: throw new Exception();
+
+
+	}
+	
+	}
 }
-

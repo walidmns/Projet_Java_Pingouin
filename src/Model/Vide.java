@@ -2,7 +2,7 @@ package Model;
 public class Vide extends Tuile
 {
 	public Vide(){
-		this.representation ='#';
+		this.representation ='-';
 	}
 
 	public void Marche(Objet o) {

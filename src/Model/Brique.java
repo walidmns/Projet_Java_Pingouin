@@ -33,10 +33,12 @@ public class Brique extends Objet {
 
 switch(Clavier.Touche){
 
-	 case Haut : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+	 case Haut : 
+	 if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
 		this.y --;}
 	break;
-	case Bas : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+	case Bas : 
+	if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
 		this.y ++;}
 	break;
 	
@@ -45,7 +47,8 @@ switch(Clavier.Touche){
 		this.x ++;}
 		// System.out.println(Main.niveau.terrain[this.y][this.x-1].representation); 
 	break;
-	case Gauche : if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
+	case Gauche : 
+	if(Main.niveau.objets[0].x == Main.niveau.objets[2].x && Main.niveau.objets[0].y == Main.niveau.objets[2].y ){
 		this.x --;}
 	break;
 }

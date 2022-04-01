@@ -29,7 +29,7 @@ public class Main
 			AffichageConsole.Afficher(niveau);
 			
 			if(niveau.fini()){
-				System.out.println("Le jeu est terminé");
+				System.out.println("Le niveau est terminé");
 				break;
 			}
 				
@@ -65,7 +65,7 @@ public class Main
 			if (resul ==3){
 				return;
 			}
-			// Init (chargement des modèle)
+			// // Init (chargement des modèle)
 			 niveau = new Niveau1();
 			//  System.out.println("coucou");
 			 LancerNiveau(niveau);
